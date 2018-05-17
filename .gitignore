@@ -1,0 +1,10 @@
+#Exclude .htaccess file
+.htaccess
+
+#Exclude .txt files
+*.txt
+#except read me
+!README.txt
+
+#exclude fonts
+_fonts/
