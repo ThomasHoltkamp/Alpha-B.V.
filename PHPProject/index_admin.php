@@ -79,6 +79,9 @@ if (isset($_POST['verbutton'])) {
             </div>
         </div>
         <div id="navMidden">
+            <button id="navNaarContact">
+                Naar Contact Admin
+            </button>
         </div>
         <div id="navRechts">
             <!--only show when on mobile-->
@@ -93,6 +96,7 @@ if (isset($_POST['verbutton'])) {
                     Uitloggen
                 </button>
             </a>
+
 
         </div>
     </nav>
