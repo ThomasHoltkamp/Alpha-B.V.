@@ -43,10 +43,10 @@ nav h1 {
     width: auto;
     height: auto;
     margin-right: 45%;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
+    margin-top: -20px;
     font-size: 10px;
 }
-
 
 #navMidden {
     display: inline-block;
@@ -74,6 +74,21 @@ nav h1 {
 }
 
 #navUitloggen a {
+    text-decoration: none;
+    color: black;
+}
+
+#navNaarContact {
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    background-color: white;
+    min-width: 75px;
+    padding: 3% 0 3% 0;
+    margin-top: 155px;
+}
+
+#navNaarContact a {
     text-decoration: none;
     color: black;
 }
