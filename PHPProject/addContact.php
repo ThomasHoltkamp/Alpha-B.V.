@@ -24,9 +24,8 @@
         require('connect.php');
         $query ="";
 
-        if (isset($_POST["Username"]) && $_POST["Password"] &&
-            $_POST["Voornaam"] && $_POST["Achternaam"] &&
-            $_POST["Email"] && $_POST["Telefoon"]){
+        if (isset($_POST["ContactVnaam"]) && $_POST["ContactAnaam"] &&
+            $_POST["ContactEmail"]) {
             //als de form goed is ingevult
             if (isset($_POST['AdminRole'])){
                 $admin = 1;
@@ -41,9 +40,9 @@
             $hashedpass = crypt($password, $salt);
 
 
-            $query = "INSERT INTO `gebruikers` (`GebruikerVnaam`, 
-`GebruikerVvg`, `GebruikerAnaam`, `GebruikerEmail`, `GebruikerTel`, 
-`Username`, `Password`, `AdminRole`) VALUES 
+            $query = "INSERT INTO `contacten` (`ContactVnaam`, 
+`ContactVvg`, `ContactAnaam`, `ContactBedrijfsnaam`, `ContactEmail`, `ContactTelPrive`, 
+`ContactTelZakelijk`, `ContactBedrijfPlaats`) VALUES 
 ('{$_POST["Voornaam"]}', '{$_POST["Vvg"]}', '{$_POST["Achternaam"]}', 
 '{$_POST["Email"]}', '{$_POST["Telefoon"]}', 
 '{$_POST["Username"]}', '$hashedpass', '{$admin}')";
@@ -66,11 +65,11 @@
 
             unset($_POST['nogeenmaken']);
             // als de pagina geladen word met nog een maken
-            $queryGetId = "SELECT GebruikerId FROM gebruikers ORDER BY GebruikerId DESC LIMIT 1";
+            $queryGetId = "SELECT ContactId FROM contacten ORDER BY ContactId DESC LIMIT 1";
             $result = mysqli_query($connection, $queryGetId) or die (mysqli_error());
             $Id = mysqli_fetch_assoc($result);
 
-            echo "Gebruiker ".$_POST['Username']. " is aangemaakt met het ID: ";
+            echo "Contact ".$_POST['ContactVnaam']. " is aangemaakt met het ID: ";
             foreach ($Id as $id){
                 echo $id;
             };
@@ -82,17 +81,17 @@
 
         <form action="" method="post">
             <b>Gebruiker toevoegen:</b> <br>
-            Username:<input type="text" maxlength="15" name="Username" placeholder="Username" required>*<br>
-            Password:<input type="password" maxlength="15" name="Password" placeholder="Password" required>*<br>
-            Admin:<input type="checkbox" name="AdminRole" placeholder="Admin"><br>
+            Voornaam:<input type="text" maxlength="15" name="ContactVnaam" placeholder="Voornaam" required>*<br>
+            Voorvoegsels:<input type="text" maxlength="7" name="Vvg" placeholder="Voorvoegsels" ><br>
+            Achternaam:<input type="text" maxlength="15" name="ContactAnaam" placeholder="Achternaam" required>*<br>
             <br>
-            Voornaam Gebruiker:<input type="text" maxlength="15" name="Voornaam" placeholder="Voornaam" required>*<br>
-            Vvg Gebruiker:<input type="text" maxlength="8" name="Vvg" placeholder="Voorvoegsels"><br>
-            Achternaam Gebruiker:<input type="text" maxlength="15" name="Achternaam" placeholder="Achternaam" required>*<br>
-            Email Gebruiker:<input type="text" maxlength="20" name="Email" placeholder="Email" required>*<br>
-            Telefoon Gebruiker:<input type="text" maxlength="11" name="Telefoon" placeholder="Telefoonnummer" required>*<br>
-            <input type="submit" value="gebruiker maken" name="maken"><br>
-            <input type="submit" value="nog een gebruiker maken" name="nogeenmaken">
+            Bedrijfsnaam:<input type="text" maxlength="15" name="Bedrijfsnaam" placeholder="Bedrijfsnaam" ><br>
+            Email:<input type="text" maxlength="20" name="Email" placeholder="Email"><br>
+            Telefoon Privé:<input type="text" maxlength="11" name="TelPrive" placeholder="Telefoon Privé" ><br>
+            Telefoon Zakelijk:<input type="text" maxlength="11" name="TelZak" placeholder="Telefoon zakelijk" ><br>
+            Bedrijfsplaats:<input type="text" maxlength="15" name="BPlaats" placeholder="Bedrijfsplaats"><br>
+            <input type="submit" value="Contact maken" name="maken"><br>
+            <input type="submit" value="Nog een contact maken" name="nogeenmaken">
         </form>
     </main>
     <footer>
