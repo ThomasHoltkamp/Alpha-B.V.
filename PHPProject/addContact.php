@@ -39,24 +39,35 @@
 
             $hashedpass = crypt($password, $salt);
 
-
+//nieuwe contact waardes
+            //
+            //
+            //
+            //
+            //
             $query = "INSERT INTO `contacten` (`ContactVnaam`, 
 `ContactVvg`, `ContactAnaam`, `ContactBedrijfsnaam`, `ContactEmail`, `ContactTelPrive`, 
 `ContactTelZakelijk`, `ContactBedrijfPlaats`) VALUES 
-('{$_POST["Voornaam"]}', '{$_POST["Vvg"]}', '{$_POST["Achternaam"]}', 
-'{$_POST["Email"]}', '{$_POST["Telefoon"]}', 
-'{$_POST["Username"]}', '$hashedpass', '{$admin}')";
+('{$_POST["ContactVnaam"]}', '{$_POST["Vvg"]}', '{$_POST["ContactAnaam"]}', 
+'{$_POST["Bedrijfsnaam"]}', '{$_POST["Email"]}', 
+'{$_POST["TelPrive"]}', '{$_POST["TelZak"]}', '{$_POST["BPlaats"]}'";
 
             $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
             //header("Location: index_admin.php");
         } else {
         }
 
-        //////////////////////////////////////////////////
+
         if (isset($_POST["maken"])){
             // als de pagina geladen word met maken
 
             unset($_POST["maken"]);
+            //
+            //
+            //
+            //
+            //
+            //LOCATION VERANDEREN NAAR CONTACT INDEX ADMIN
             header("Location:index_admin.php");
 
 
