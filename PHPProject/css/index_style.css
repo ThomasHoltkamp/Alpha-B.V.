@@ -97,22 +97,37 @@ nav h1 {
 }
 
 #rechts table {
-
     margin: 0 auto;
     margin-top: 2%;
-    margin-left: 0px;
+    margin-left: 2%;
+    border-collapse: collapse;
+}
+
+#rechts tr {
+    border: solid 1px black;
+}
+
+#rechts td {
+    border: solid 1px black;
+    padding: 10px;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+#rechts th {
+    border: solid 1px black;
+    padding: 5px;
 }
 
 #btnToevoegen {
-     display: inline-block;
-     width: 35%;
-     min-width: 75px;
-     height: auto;
-     padding: 3% 0 3% 0;
-     margin-top: 31%;
-     margin-left: 20%;
-     background-color: white;
- }
+    display: inline-block;
+    width: 35%;
+    min-width: 75px;
+    height: auto;
+    padding: 3% 0 3% 0;
+    margin-top: 31%;
+    margin-left: 20%;
+    background-color: white;
+}
 
 #btnVerwijzig {
     display: inline-block;
