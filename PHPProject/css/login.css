@@ -1,0 +1,128 @@
+body {
+    font-family: Verdana;
+    background: url(../images/u0.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container {
+    width: 55%;
+    height: auto;
+    margin: 10% 0 0 35%;
+}
+
+#inloggen {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    background-color: #f2f2f2;
+}
+
+#boven {
+    display: inline-block;
+    width: 95%;
+    height: auto;
+    margin-bottom: 5%;
+    padding: 5% 0 0 5%;
+}
+
+#bovenRechts {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    margin-top: 13%;
+    margin-left: 2%;
+    vertical-align: top;
+}
+
+#onder {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+}
+
+#onder input[type=text] {
+    width: 40%;
+    height: 4%;
+    margin-left: 27%;
+}
+
+#onder input[type=password] {
+    width: 40%;
+    height: 4%;
+    margin-left: 27%;
+}
+
+#onder input[type=checkbox] {
+    margin-left: 34%;
+}
+
+#onder input[type=submit] {
+    width: 25%;
+    height: 5%;
+    margin-left: 34%;
+}
+
+@media screen and (max-width: 800px) {
+
+    html, body { margin: 0; padding: 0; }
+
+    #inloggen {
+        height: 440px;
+        width: 400px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -220px;
+        margin-left: -200px;
+    }
+
+    #onder input[type=text] {
+        width: 40%;
+        height: 6%;
+        margin-left: 27%;
+        margin-top: 20px;
+    }
+
+    #onder input[type=password] {
+        width: 40%;
+        height: 6%;
+        margin-left: 27%;
+    }
+
+    #onder input[type=checkbox] {
+        margin-left: 34%;
+    }
+
+    #onder input[type=submit] {
+        width: 35%;
+        height: 10%;
+        margin-left: 30%;
+        margin-top: 20px;
+    }
+
+    .logo {
+        height: 145px;
+        width: 145px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #inloggen {
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        margin-left: 35%;
+    }
+}
