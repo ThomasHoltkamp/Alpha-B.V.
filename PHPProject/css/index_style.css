@@ -1,4 +1,3 @@
-
 body {
     font-family: Verdana;
     background-color: white;
@@ -43,10 +42,10 @@ nav h1 {
     width: auto;
     height: auto;
     margin-right: 45%;
-    margin-bottom: 6%;
-    margin-top: -20px;
+    margin-bottom: 2%;
     font-size: 10px;
 }
+
 
 #navMidden {
     display: inline-block;
@@ -59,36 +58,42 @@ nav h1 {
     display: inline-block;
     width: 33%;
     height: auto;
-    vertical-align: top;
+    vertical-align: bottom;
 }
 
 #navUitloggen {
-    display: inline-block;
-    width: 35%;
+    float: right;
+    width: 10%;
     height: auto;
     padding: 3% 0 3% 0;
-    margin-top: 31%;
-    margin-left: 62%;
+    margin-top: 1%;
+    background-color: white;
+    min-width: 75px;
+}
+
+#navAdmin {
+    float: right;
+    width: 20%;
+    height: auto;
+    padding: 3% 0 3% 0;
+    margin-top: 1%;
+    margin-right: 2%;
+    background-color: white;
+    min-width: 75px;
+}
+
+#navContact {
+    float: right;
+    width: 25%;
+    height: auto;
+    padding: 3% 0 3% 0;
+    margin-top: 1%;
+    margin-right: 2%;
     background-color: white;
     min-width: 75px;
 }
 
 #navUitloggen a {
-    text-decoration: none;
-    color: black;
-}
-
-#navNaarContact {
-    display: inline-block;
-    width: 40%;
-    height: auto;
-    background-color: white;
-    min-width: 75px;
-    padding: 3% 0 3% 0;
-    margin-top: 155px;
-}
-
-#navNaarContact a {
     text-decoration: none;
     color: black;
 }
@@ -114,35 +119,31 @@ nav h1 {
 #rechts table {
     margin: 0 auto;
     margin-top: 2%;
-    margin-left: 2%;
     border-collapse: collapse;
 }
 
-#rechts tr {
-    border: solid 1px black;
+#rechtsIndex {
+    display: inline-block;
+    width: 100%;
+    height: 510px;
 }
 
-#rechts td {
-    border: solid 1px black;
-    padding: 10px;
-    border-bottom: 1px solid #b0b0b0;
-}
-
-#rechts th {
-    border: solid 1px black;
-    padding: 5px;
+#rechtsIndex table {
+    margin: 0 auto;
+    margin-top: 2%;
+    border-collapse: collapse;
 }
 
 #btnToevoegen {
-    display: inline-block;
-    width: 35%;
-    min-width: 75px;
-    height: auto;
-    padding: 3% 0 3% 0;
-    margin-top: 31%;
-    margin-left: 20%;
-    background-color: white;
-}
+     display: inline-block;
+     width: 35%;
+     min-width: 75px;
+     height: auto;
+     padding: 3% 0 3% 0;
+     margin-top: 31%;
+     margin-left: 20%;
+     background-color: white;
+ }
 
 #btnVerwijzig {
     display: inline-block;
@@ -162,9 +163,11 @@ nav h1 {
     text-decoration: none;
     color: black;
 }
+
 .hiddenButton {
     display: none;
 }
+
 footer {
     display: inline-block;
     width: 100%;
@@ -173,24 +176,30 @@ footer {
     background-color: #000070;
     border: solid black 1px;
 }
+
 @media screen and (max-width: 400px){
     #container{
         min-width: 400px;
     }
+
     #links {
         display: none;
     }
+
     #navImage {
         display: none;
     }
+
     .logo {
         display: none;
     }
+
     #navRechts {
         margin-left: -290px;
         width: 400px;
         height: 120px;
     }
+
     #btnToevoegen {
         width: 35%;
         min-width: 100px;
@@ -199,17 +208,20 @@ footer {
         margin-top: 31%;
         height: 45px;
     }
+
     #navUitloggen {
         margin-top: 16%;
         margin-left: 20px;
         width: 100px;
         height: auto;
     }
+
     nav h1{
         margin-top: 20px;
         font-size: 20px;
         margin-left: auto;
     }
+
     .hiddenButton {
         display: inline-block;
     }
